@@ -78,7 +78,7 @@ echo Type 1 or 2, then press ENTER to send that person a meassage
 set /p CLISW=
 if %CLISW%==1 goto CLISW1
 if %CLISW%==2 goto CLISW2
-goto JLIS
+goto CLIS
 
 :CLISW1
 cls
@@ -92,7 +92,7 @@ pause >nul
 start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromCaleb.txt
 echo Press a key to go back to your INBOX
 pause >nul
-goto GLI
+goto CLI
 
 :CLISW2
 cls
@@ -106,7 +106,7 @@ pause >nul
 start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromCaleb.txt
 echo Press a key to go back to your INBOX
 pause >nul
-goto GLI
+goto CLI
 
 
 
