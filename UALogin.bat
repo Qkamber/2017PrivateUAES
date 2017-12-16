@@ -56,6 +56,7 @@ for /f "tokens=*" %%A in (%file2%) do (echo %%A)
 echo ..........................................
 echo To go back to the login page, press L, and then Enter
 echo To send a meassage to someone, press S, and then Enter
+echo To refresh the page, press R, and then Enter
 echo To access someone elses account, press the first letter
 echo of their name, then press Enter
 set /p CLIO=
@@ -67,6 +68,8 @@ if %CLIO%==G goto GLI
 if %ClIO%==g goto GLI
 if %CLIO%==J goto JLI
 if %ClIO%==j goto JLI
+if %CLIO%==R goto CLIO
+if %CLIO%==r goto CLIO
 goto CLI
 
 :CLIS
@@ -124,11 +127,14 @@ for /f "tokens=*" %%A in (%file2%) do (echo %%A)
 echo ..........................................
 echo To go back to the login page, press L, and then Enter
 echo To send a meassage to someone, press S, and then Enter
+echo To refresh the page, press R, and then Enter
 set /p GLIO=
 if %GLIO%==S goto GLIS
 if %GLIO%==s goto GLIS
 if %GLIO%==L goto Login
 if %GLIO%==l goto Login
+if %GLIO%==R goto GLIO
+if %GLIO%==r goto GLIO
 goto GLI
 
 :GLIS
@@ -186,11 +192,14 @@ for /f "tokens=*" %%A in (%file2%) do (echo %%A)
 echo ..........................................
 echo To go back to the login page, press L, and then Enter
 echo To send a meassage to someone, press S, and then Enter
+echo To refresh the page, press R, and then Enter
 set /p JLIO=
 if %JLIO%==S goto JLIS
 if %JLIO%==s goto JLIS
 if %JLIO%==L goto Login
 if %JLIO%==l goto Login
+if %JLIO%==R goto JLI
+if %JLIO%==r goto JLI
 goto JLI
 
 :JLIS
