@@ -1,7 +1,7 @@
 @echo off
 cls
 color 7c
-echo Loading Login Page
+echo Loading Login Page...
 ping localhost > nul
 cls
 @echo off
@@ -15,7 +15,7 @@ echo Please type in your Username to begin, or type 'Exit', to leave
 set /p Username=
 
 if %Username%==Caleb goto CalebPword
-if %Username%==Dog goto GregPword
+if %Username%==BCF goto GregPword
 if %Username%==Jacob goto JacobPword
 if %Username%==exit exit
 
