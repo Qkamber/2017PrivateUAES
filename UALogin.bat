@@ -32,7 +32,7 @@ goto Login
 cls
 echo Please type in your Password to enter the account
 set /p GregPword=
-if %GregPword%==dog goto GLI
+if %GregPword%==giftcard goto GLI
 goto Login
 
 :JacobPword
