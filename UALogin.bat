@@ -17,7 +17,7 @@ set /p Username=
 if %Username%==Caleb goto CalebPword
 if %Username%==Dog goto GregPword
 if %Username%==Jacob goto JacobPword
-if %Username%==Exit exit
+if %Username%==exit exit
 
 goto Login
 
@@ -25,7 +25,7 @@ goto Login
 cls
 echo Please type in your Password to enter the account
 set /p CalebPword=
-if %CalebPword%==Potato goto CLI
+if %CalebPword%==Magnum11 goto CLI
 goto Login
 
 :GregPword
@@ -46,43 +46,144 @@ goto Login
 cls
 color f0
 echo Welcome Caleb, to the Useless Apps Email Beta Program
-echo.
+echo From Greg
 set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromGreg.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
-echo.
+echo ..........................................
+echo From Jacob
 set file2=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromJacob.txt
 for /f "tokens=*" %%A in (%file2%) do (echo %%A)
-echo.
-echo To go back to the login page, press any key
+echo ..........................................
+echo To go back to the login page, press L, and then Enter
+echo To send a meassage to someone, press S, and then Enter
+echo To access someone elses account, press the first letter
+echo of their name, then press Enter
+set /p CLIO=
+if %CLIO%==S goto CLIS
+if %CLIO%==s goto CLIS
+if %CLIO%==L goto Login
+if %CLIO%==l goto Login
+if %CLIO%==G goto GLI
+if %ClIO%==g goto GLI
+if %CLIO%==J goto JLI
+if %ClIO%==j goto JLI
+goto CLI
+
+:CLIS
+cls
+echo Who do you want to meassage?
+echo 1) Greg
+echo 2) Jacob
+echo Type 1 or 2, then press ENTER to send that person a meassage
+set /p CLISW=
+if %CLISW%==1 goto CLISW1
+if %CLISW%==2 goto CLISW2
+goto JLIS
+
+:CLISW1
+cls
+echo You are meassaging Greg
+echo When the text file (Notepad) is open, type your meassage, including
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [alt] and [f4] at the same time.
+echo Press any key to open the text file and start.
 pause >nul
-goto login
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromCaleb.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto GLI
+
+:CLISW2
+cls
+echo You are meassaging Jacob
+echo When the text file (Notepad) is open, type your meassage, including
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [alt] and [f4] at the same time.
+echo Press any key to open the text file and start.
+pause >nul
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromCaleb.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto GLI
+
+
 
 :GLI
 cls
 color 27
 echo Welcome Greg, to the Useless Apps Email Beta Program
-echo.
-set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromGreg.txt
+echo From Caleb
+set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromCaleb.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
-echo.
-set file2=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromJacob.txt
+echo ..........................................
+echo From Jacob
+set file2=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromJacob.txt
 for /f "tokens=*" %%A in (%file2%) do (echo %%A)
-echo.
-echo To go back to the login page, press any key
+echo ..........................................
+echo To go back to the login page, press L, and then Enter
+echo To send a meassage to someone, press S, and then Enter
+set /p GLIO=
+if %JLIO%==S goto GLIS
+if %JLIO%==s goto GLIS
+if %JLIO%==L goto Login
+if %JLIO%==l goto Login
+goto GLI
+
+:GLIS
+cls
+echo Who do you want to meassage?
+echo 1) Caleb
+echo 2) Jacob
+echo Type 1 or 2, then press ENTER to send that person a meassage
+set /p GLISW=
+if %GLISW%==1 goto GLISW1
+if %GLISW%==2 goto GLISW2
+goto GLIS
+
+:GLISW1
+cls
+echo You are meassaging Caleb
+echo When the text file (Notepad) is open, type your meassage, including
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [alt] and [f4] at the same time.
+echo Press any key to open the text file and start.
 pause >nul
-goto login
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromGreg.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto GLI
+
+:GLISW2
+cls
+echo You are meassaging Jacob
+echo When the text file (Notepad) is open, type your meassage, including
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [alt] and [f4] at the same time.
+echo Press any key to open the text file and start.
+pause >nul
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromGreg.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto GLI
+
+
 
 :JLI
 cls
 color 0f
 echo Welcome Jacob, to the Useless Apps Email Beta Program
-echo.
-set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromGreg.txt
+echo From Caleb
+set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromCaleb.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
-echo.
-set file2=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromJacob.txt
+echo ..........................................
+echo From Greg
+set file2=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromGreg.txt
 for /f "tokens=*" %%A in (%file2%) do (echo %%A)
-echo.
+echo ..........................................
 echo To go back to the login page, press L, and then Enter
 echo To send a meassage to someone, press S, and then Enter
 set /p JLIO=
@@ -91,6 +192,7 @@ if %JLIO%==s goto JLIS
 if %JLIO%==L goto Login
 if %JLIO%==l goto Login
 goto JLI
+
 :JLIS
 cls
 echo Who do you want to meassage?
@@ -101,8 +203,31 @@ set /p JLISW=
 if %JLISW%==1 goto JLISW1
 if %JLISW%==2 goto JLISW2
 goto JLIS
+
 :JLISW1
 cls
 echo You are meassaging Caleb
 echo When the text file (Notepad) is open, type your meassage, including
-echo who it is from. The Meassage can be Editted later.
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [ctrl] and [w] at the same time.
+echo Press any key to open the text file and start.
+pause >nul
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromJacob.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto JLI
+
+:JLISW2
+cls
+echo You are meassaging Greg
+echo When the text file (Notepad) is open, type your meassage, including
+echo who it is from. The Meassage can be Editted later. After you have
+echo finished typing your meassage press [ctrl] and [s] at the same time
+echo after that you can close [alt] and [f4] at the same time.
+echo Press any key to open the text file and start.
+pause >nul
+start \\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromJacob.txt
+echo Press a key to go back to your INBOX
+pause >nul
+goto JLI
