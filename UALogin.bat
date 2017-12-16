@@ -1,28 +1,36 @@
 @echo off
 cls
-color 7c
-echo Loading Login Page...
-ping localhost > nul
+color 8f
+echo Loading UAES.
+ping localhost -n 2 >nul
+cls
+echo Loading UAES..
+ping localhost -n 2 >nul
+cls
+echo Loaded!
+ping localhost -n 2 >nul
 cls
 @echo off
-goto login
-start 
 :Login
 cls
-color 7c
-echo Login to Useless Apps 
+color 8f
+echo Login to Useless Apps
+echo ............................................................... 
 echo Please type in your Username to begin, or type 'Exit', to leave
 set /p Username=
-
 if %Username%==Caleb goto CalebPword
 if %Username%==BCF goto GregPword
 if %Username%==Jacob goto JacobPword
 if %Username%==exit exit
-
 goto Login
+
+
 
 :CalebPword
 cls
+color 8f
+echo Enter Password
+echo .................................................
 echo Please type in your Password to enter the account
 set /p CalebPword=
 if %CalebPword%==Magnum11 goto CLI
@@ -30,6 +38,9 @@ goto Login
 
 :GregPword
 cls
+color 27
+echo Enter Password
+echo .................................................
 echo Please type in your Password to enter the account
 set /p GregPword=
 if %GregPword%==giftcard goto GLI
@@ -37,15 +48,21 @@ goto Login
 
 :JacobPword
 cls
+color 0f
+echo Enter Password
+echo .................................................
 echo Please type in your Password to enter the account
 set /p JacobPword=
 if %JacobPword%==Ross123g goto JLI
 goto Login
 
+
+
 :CLI
 cls
-color f0
+color 8f
 echo Welcome Caleb, to the Useless Apps Email Beta Program
+echo .....................................................
 echo From Greg
 set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\CalebfromGreg.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
@@ -117,6 +134,7 @@ goto CLI
 cls
 color 27
 echo Welcome Greg, to the Useless Apps Email Beta Program
+echo ....................................................
 echo From Caleb
 set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\GregfromCaleb.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
@@ -133,8 +151,8 @@ if %GLIO%==S goto GLIS
 if %GLIO%==s goto GLIS
 if %GLIO%==L goto Login
 if %GLIO%==l goto Login
-if %GLIO%==R goto GLIO
-if %GLIO%==r goto GLIO
+if %GLIO%==R goto GLI
+if %GLIO%==r goto GLI
 goto GLI
 
 :GLIS
@@ -182,6 +200,7 @@ goto GLI
 cls
 color 0f
 echo Welcome Jacob, to the Useless Apps Email Beta Program
+echo .....................................................
 echo From Caleb
 set file1=\\192.168.1.1\Seagate_UltraSlimGD_1_3337\CalebsTesting\JacobfromCaleb.txt
 for /f "tokens=*" %%A in (%file1%) do (echo %%A)
