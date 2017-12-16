@@ -125,10 +125,10 @@ echo ..........................................
 echo To go back to the login page, press L, and then Enter
 echo To send a meassage to someone, press S, and then Enter
 set /p GLIO=
-if %JLIO%==S goto GLIS
-if %JLIO%==s goto GLIS
-if %JLIO%==L goto Login
-if %JLIO%==l goto Login
+if %GLIO%==S goto GLIS
+if %GLIO%==s goto GLIS
+if %GLIO%==L goto Login
+if %GLIO%==l goto Login
 goto GLI
 
 :GLIS
